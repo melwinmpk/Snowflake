@@ -1,0 +1,27 @@
+Snowflake Exercise
+1.	Clone a Table from another DB. E.g. Assume we have 2 DBs – DEV_DB and PRD_DB and the Roles for these DBs are DEV_ROLE and PRD_ROLE. The Roles should be exclusive to the DB which means DEV_ROLE should not be able to access the PROD_DB and vice versa. Now Clone a Table from PRD_DB to DEV_DB.
+2.	Create a Temporary Table, Insert some data, do some Updates/Delete on the data and restore the Original data using Time Travel.
+3.	Create a Transient Table, Insert some data, do some Updates/Delete on the data and restore the Original data using Time Travel.
+4.	Create a normal (Permanent) Table, set the Time Travel Interval to 1 day, drop the Table and restore it using the FailSafe option.
+5.	Create a Table (TABLE1) and load data from multiple sources on hourly basis for 4 - 5 hours. On the 5th hour restore the data to how it was at the end of 1st hour. Clone the TABLE1 to TABLE2 based on how the data was at the end of 2nd hour.  
+6.	Create a stream on Table to log the changes and capture the change logs in a separate Table.
+7.	Create an External Table and auto refresh the data using Snowpipe.
+8.	Create an External Table and instead of using Snowpipe, use a Stored Procedure and Task to refresh the data.
+9.	Create a Masking policy to mask PII data on an External Table.
+10.	Create a Secure view to restrict data based on current Role.
+11.	Create a Materialized view.
+12.	Create a Role and provide ReadOnly privileges to PROD_DB.
+13.	Resource Monitor: Create a Resource Monitor to be triggered on consumption of 90 Snowflake credits and assign it to a Warehouse.
+14.	Identify the WH COST and Storage costs associated with your Snowflake Account.
+15.	Create an Internal and External Stage, load data from S3 to these stages and Insert the data into a Table.
+16.	Create a stored procedure, switch role inside the stored and drop a Table. 
+E.g. Assume Stored Procedure SP1 is executed using ROLE1, Switch to ROLE2 inside the Stored Procedure and drop a Table using ROLE2.
+17.	Identify the Queries executed on DEV_DB and which User\Role has executed most Queries.
+18.	Identify if there any cross-environment access (DEV_ROLE granted Privilege to PRD_DB and vice versa)
+19.	Set up Future Grants on DEV_DB so that once a Table is created, Select Privilege is provided to DEV_ROLE2.
+20.	Create a Task that’s executed on daily basis at 9.30 AM IST.
+21.	Create a Schema with Managed Access and Grant access to Objects within the schema using a role other than SYSADMIN & Schema’s Owner.
+22.	Retrieve data from a previously executed Query using Result_scan function.
+23.	Create a Share and provide access to specific Tables in the schema to the share.
+24.	Create a Share and share the entire schema (all Tables, Views, etc.) to the share.
+25.	Clone a Schema with External Tables.
